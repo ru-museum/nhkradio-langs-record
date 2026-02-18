@@ -77,11 +77,9 @@ DATE="${YEAR}${DATE1}${_DAY}-${DATE2}"
 
 # --------------------------------------------------
 # 基本変数初期化
-# ストリーミング配信 URL
-M3U8URL="https://radio-stream.nhk.jp/hls/live/2023501/nhkradiruakr2/master.m3u8"
-# 2021年9月現在 URL が変更されています。
-# 旧URL：上記で動作しない場合は試して下さい。
-# M3U8URL="https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8"
+# ストリーミング配信 URL は現在変更されています（2026-02-18）。
+# M3U8URL="https://radio-stream.nhk.jp/hls/live/2023501/nhkradiruakr2/master.m3u8"
+M3U8URL="https://simul.drdi.st.nhk/live/5/joined/master.m3u8"
 COURSE=""
 COURSENUM=""
 COURSENAME=""
