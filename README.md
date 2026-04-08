@@ -65,7 +65,7 @@ NHKラジオ語学番組録音（NHK-FM）
 ```
 $ chmod 744(or 755)  nhkradio-langs-record.sh　（-rwxr--r-- or -rwxr-xr-x）
 ```
-- 作業フォルダでヘルプを表示させ、録音する講座の** ID 番号**を確認します。  
+- 作業フォルダでヘルプを表示させ、録音する講座の **ID 番号**を確認します。  
 ```
 $ ./nhkradio-langs-record.sh -h
 ```
