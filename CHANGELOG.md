@@ -1,6 +1,10 @@
 
 
-# nhkradio2-langs-record CHANGELOG
+# nhkradio-langs-record CHANGELOG
+
+2026-04-08
+- リポジトリ名を **nhkradio-langs-record** に変更しました。
+- ３月３０日の再編に伴う修正と若干の機能追加を行いました。
 
 2026-02-18
 - ストリーミング配信URIが変更されていたので修正しました。
