@@ -4,7 +4,8 @@ NHKラジオ語学番組録音（NHK-FM）
 # 概要  
 - これは「NHK ONEらじる★らじる」の「語学ラジオ番組」を**自動録音**するものです。
 - 語学番組以外の全ての番組（NHK-AM）も録音出来ます。
-
+- これらの機能は、[**nhkradio-record**](https://github.com/ru-museum/nhkradio-langs-record)においても同じく使用出来ます。  
+（「NHK高校講座」その他の番組に対応しています）
 ## 【注意】  
 - 2026年度の番組改定（3月30日）に依る再編（2波体制）が行われ**第２放送**は**NHK-FM**へと移行されました。  
 [ラジオ再編](https://www.nhk.or.jp/radio/saihen/) https://www.nhk.or.jp/radio/saihen/  
