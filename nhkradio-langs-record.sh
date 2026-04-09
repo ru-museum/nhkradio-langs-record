@@ -372,8 +372,7 @@ if [[ "${SAVEFILE_NAME}" ]];then
 
   echo ""
   echo "録音を開始しました......"
-  # ffmpeg -i "${M3U8URL}" -t "${RECTIMES}" -c copy "${SAVEFILE_NAME}"
-  echo ffmpeg -i "${M3U8URL}" -t "${RECTIMES}" -c copy "${SAVEFILE_NAME}"
+  ffmpeg -i "${M3U8URL}" -t "${RECTIMES}" -c copy "${SAVEFILE_NAME}"
   echo "録音を終了しました。"
   echo ""
 else
