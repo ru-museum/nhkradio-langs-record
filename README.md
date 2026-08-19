@@ -6,6 +6,11 @@ NHKラジオ語学番組録音（NHK-FM）
 - 語学番組以外の全ての番組（NHK-AM）も録音出来ます。
 - これらの機能は、[**nhkradio-record**](https://github.com/ru-museum/nhkradio-langs-record)においても同じく使用出来ます。  
 （「NHK高校講座」その他の番組に対応しています）
+
+### 【CHANGELOG】
+- **FIX**：ストリーミング配信URLが変更された為、修正を行いました(2026-08-20)。  
+ 　　※ 配信URLは**時々変更されることがあります**ので、保存されなくなった時には確認を行って下さい。
+
 ## 【注意】  
 - 2026年度の番組改定（3月30日）に依る再編（2波体制）が行われ**第２放送**は**NHK-FM**へと移行されました。  
 [ラジオ再編](https://www.nhk.or.jp/radio/saihen/) https://www.nhk.or.jp/radio/saihen/  
@@ -98,12 +103,15 @@ $ ./nhkradio-langs-record.sh -h
 # 当方の環境では50秒程の遅延が必要でした(NURO光2ギガ:東京都)　
 # sleep の表記は「;」に注意して下さい。
 30 2 * * 1-5 sleep 50; username bash /your/directory/nhkradio-langs-langs-record.sh -i 14
-
- 【注意】   
-  "sleep 50;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
-    Error: bad username; while reading /etc/crontab
-  30 2 * * 1-5 username bash /your/directory/nhkradio-langs-record.sh -i 14 -s 50
 ```
+ ### 【注意】   
+ (1) "sleep 50;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
+　　　Error: bad username; while reading /etc/crontab  
+　　　30 2 * * 1-5 username bash /your/directory/nhkradio-langs-record.sh -i 14 -s 50  
+
+  (2) Debian 系では命名規則により、「**実行ファイル名に . (ピリオド) を含めてはならない**」とあり、  
+  　　CRON で動作しない場合は、拡張子の **.sh** を除外し **nhkradio-langs-record** としてみて下さい。   
+
 ### （２）CRONの再起動   
 ```
 # /etc/init.d/cron restart  // Debian
@@ -187,10 +195,12 @@ $ bash ./nhkradio-langs-record.sh -i 14 -r 00:00:10
 -->
 
 # 注意  
-- ストリーミング配信URLは変更されています。  
-　【東京の場合】  
-　　　AM: https://simul.drdi.st.nhk/live/3/joined/master.m3u8  
-　　　FM: https://simul.drdi.st.nhk/live/5/joined/master.m3u8  
+- ストリーミング配信URLは変更されています(2026-08-20)。  
+　simul => simul**2**   
+
+ 【東京の場合】  
+　　　AM: https://simul2.drdi.st.nhk/live/3/joined/master.m3u8  
+　　　FM: https://simul2.drdi.st.nhk/live/5/joined/master.m3u8  
   　　※ 回線の都合等、他地域からの配信が必要な場合は、以下でURIを取得出来ます。  
     　　　ソース内の**番号部分**を変更して下さい。  
   　　　https://www.nhk.or.jp/radio/config/config_web.xml
